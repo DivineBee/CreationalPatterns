@@ -35,8 +35,8 @@ an alternative constructor that accepts an objec of the class as an argument. Th
 consist only of the "new" line which uses its own class name. I applied this design pattern to  
 the rams because it can be more than one ram in a pc, and in the main class a client is being asked    
 if he wants one more ram. If yes he can add one more(in the background the clonning of the initial  
-ram is happening) why cloning here? Because if adding another ram from different manufacturer or type  
-they can happen to be incompatible that's why we need exactly the same ram as our initial one.
+ram is happening) why cloning here? Because if adding another ram from different manufacturer or  
+type they can happen to be incompatible that's why we need exactly the same ram as our initial one.
 
 You can run it from the Client class, you will be asked to input the desired pc and then if you want  
 one more ram(yes/no) and then the output of working pc processes you got from this build.   
