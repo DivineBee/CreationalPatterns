@@ -9,17 +9,16 @@
 * [Output Examples](#output-examples)
 
 ## Explanation
-For this lab I used the PC building domain area.  
-Where will be a factory named PCFactory which will be build from    
-different hardware components: cpu, gpu, ram, motherboard.  
+For this lab I used the PC building domain area. Where will be a factory named PCFactory  
+which will be build from different hardware components: cpu, gpu, ram, motherboard.    
 
-For this lab I mapped out different pc components and their variants,  
-like motherboards which can be either for intel or amd cpu, depending on  
-the socket, gpus can be from different manufacturer, cpus and rams.  
+For this lab I mapped out different pc components and their variants, like motherboards which  
+can be either for intel or amd cpu, depending on the socket, gpus can be from different  
+manufacturer, cpus and rams.  
 
-For the abstract factory I used - motherboards, cpu and gpu. They all have  
-an interface for their specific component, then I created concrete product classes  
-which differ and implement same methods as the interface(here it comes the factory method)  
+For the abstract factory I used - motherboards, cpu and gpu. They all have an interface for  
+their specific component, then I created concrete product classes which differ and implement  
+same methods as the interface(here it comes the factory method).  
 Then I declared the abstract factory interface called PCFactory with a set of creation  
 methods for all abstract products. Then implemented a set of concrete factory clases, one  
 for each product variant - PCGamingFactory and PCOfficeFactory. Then in the PC class I coded  
@@ -39,8 +38,8 @@ if he wants one more ram. If yes he can add one more(in the background the clonn
 ram is happening) why cloning here? Because if adding another ram from different manufacturer or type  
 they can happen to be incompatible that's why we need exactly the same ram as our initial one.
 
-You can run it from the Client class, you will be asked to input the desired pc and then if you want one  
-more ram(yes/no) and then the output of working pc processes you got from this build.   
+You can run it from the Client class, you will be asked to input the desired pc and then if you want  
+one more ram(yes/no) and then the output of working pc processes you got from this build.   
 
 ## Code Examples
 Prototype in action(the asbtract class):
