@@ -1,9 +1,9 @@
-package com.beatrix;
+package com.beatrix.creational_patterns;
 
-import com.beatrix.cpus.CPU;
-import com.beatrix.factories.PCFactory;
-import com.beatrix.gpus.GPU;
-import com.beatrix.motherboards.Motherboard;
+import com.beatrix.creational_patterns.cpus.CPU;
+import com.beatrix.creational_patterns.factories.PCFactory;
+import com.beatrix.creational_patterns.gpus.GPU;
+import com.beatrix.creational_patterns.motherboards.Motherboard;
 
 /**
  * @author Beatrice V.

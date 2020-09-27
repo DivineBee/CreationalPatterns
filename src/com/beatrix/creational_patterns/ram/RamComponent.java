@@ -1,4 +1,4 @@
-package com.beatrix.prototype.ram;
+package com.beatrix.creational_patterns.ram;
 /**
  * @author Beatrice V.
  * @created 21.09.2020 - 11:36

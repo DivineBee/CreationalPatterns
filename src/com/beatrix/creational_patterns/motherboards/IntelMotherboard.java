@@ -1,4 +1,4 @@
-package com.beatrix.motherboards;
+package com.beatrix.creational_patterns.motherboards;
 
 /**
  * @author Beatrice V.

@@ -1,11 +1,11 @@
-package com.beatrix.factories;
+package com.beatrix.creational_patterns.factories;
 
-import com.beatrix.cpus.CPU;
-import com.beatrix.cpus.Intel;
-import com.beatrix.gpus.GPU;
-import com.beatrix.gpus.IntegratedGPU;
-import com.beatrix.motherboards.IntelMotherboard;
-import com.beatrix.motherboards.Motherboard;
+import com.beatrix.creational_patterns.cpus.CPU;
+import com.beatrix.creational_patterns.cpus.Intel;
+import com.beatrix.creational_patterns.gpus.GPU;
+import com.beatrix.creational_patterns.gpus.IntegratedGPU;
+import com.beatrix.creational_patterns.motherboards.IntelMotherboard;
+import com.beatrix.creational_patterns.motherboards.Motherboard;
 
 
 /**

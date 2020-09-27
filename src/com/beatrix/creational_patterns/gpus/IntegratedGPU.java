@@ -1,4 +1,4 @@
-package com.beatrix.gpus;
+package com.beatrix.creational_patterns.gpus;
 
 /**
  * @author Beatrice V.

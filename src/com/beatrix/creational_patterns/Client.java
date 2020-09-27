@@ -1,10 +1,10 @@
-package com.beatrix;
+package com.beatrix.creational_patterns;
 
-import com.beatrix.factories.PCFactory;
-import com.beatrix.factories.PCGamingFactory;
-import com.beatrix.factories.PCOfficeFactory;
-import com.beatrix.prototype.ram.RamDDR3;
-import com.beatrix.prototype.ram.RamDDR4;
+import com.beatrix.creational_patterns.factories.PCFactory;
+import com.beatrix.creational_patterns.factories.PCGamingFactory;
+import com.beatrix.creational_patterns.factories.PCOfficeFactory;
+import com.beatrix.creational_patterns.ram.RamDDR3;
+import com.beatrix.creational_patterns.ram.RamDDR4;
 
 import java.util.Scanner;
 

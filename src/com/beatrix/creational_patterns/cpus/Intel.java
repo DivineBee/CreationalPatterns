@@ -1,4 +1,4 @@
-package com.beatrix.cpus;
+package com.beatrix.creational_patterns.cpus;
 
 /**
  * @author Beatrice V.

@@ -1,4 +1,4 @@
-package com.beatrix.prototype.ram;
+package com.beatrix.creational_patterns.ram;
 
 /**
  * @author Beatrice V.
