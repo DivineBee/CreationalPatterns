@@ -32,7 +32,7 @@ objects.
 
 For the 3rd pattern I chose Prototype, I created an abstract class for the Ram component  
 with the clone() method which will be implemented by child classes. This prototype class defines  
-an alternative constructor that accepts an objec of the class as an argument. The clone() method  
+an alternative constructor that accepts an object of the class as an argument. The clone() method  
 consist only of the "new" line which uses its own class name. I applied this design pattern to  
 the rams because it can be more than one ram in a pc, and in the main class a client is being asked    
 if he wants one more ram. If yes he can add one more(in the background the clonning of the initial  
@@ -43,7 +43,7 @@ You can run it from the Client class, you will be asked to input the desired pc 
 more ram(yes/no) and then the output of working pc processes you got from this build.   
 
 ## Code Examples
-Prototype in action(the asbtract class):
+Prototype in action(the abstract class):
 ```java
 public abstract class RamComponent {
     public int capacity;
@@ -85,7 +85,7 @@ public class RamDDR3 extends RamComponent {
     }
     ...
 ```
-## Output Example
+## Output Examples
 ```
 Enter PC type:
 > gaming
