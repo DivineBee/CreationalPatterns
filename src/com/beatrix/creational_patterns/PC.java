@@ -8,6 +8,7 @@ import com.beatrix.creational_patterns.gpus.GPU;
 import com.beatrix.creational_patterns.motherboards.Motherboard;
 import com.beatrix.creational_patterns.ram.RamDDR3;
 import com.beatrix.creational_patterns.ram.RamDDR4;
+import com.beatrix.structural_patterns.bridge.*;
 
 import java.util.Scanner;
 

@@ -8,5 +8,5 @@
 /httpRequests/
 
 # Out folder
-/out/
-/.idea/
+out/
+.idea/
