@@ -1,8 +1,9 @@
-package com.beatrix.creational_patterns;
+package com.beatrix;
 
 import com.beatrix.ConsoleColors;
 import com.beatrix.behavioral_patterns.command.KeyboardLoader;
 import com.beatrix.behavioral_patterns.mediator.Mediator;
+import com.beatrix.creational_patterns.PC;
 import com.beatrix.creational_patterns.factories.PCFactory;
 import com.beatrix.creational_patterns.factories.PCGamingFactory;
 import com.beatrix.creational_patterns.factories.PCOfficeFactory;
