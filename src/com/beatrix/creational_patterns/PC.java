@@ -1,5 +1,7 @@
 package com.beatrix.creational_patterns;
 
+import com.beatrix.behavioral_patterns.mediator.Mediator.PCStatus;
+import com.beatrix.behavioral_patterns.mediator.Mediator;
 import com.beatrix.creational_patterns.cpus.CPU;
 import com.beatrix.creational_patterns.factories.PCFactory;
 import com.beatrix.creational_patterns.factories.PCGamingFactory;
@@ -22,10 +24,26 @@ public class PC {
     private static GPU gpu;
     private static CPU cpu;
 
+    public PCStatus status;
+    Mediator mediator = null;
+    public String name;
+
     public PC(PCFactory pcFactory) {
         motherboard = pcFactory.addMotherboard();
         gpu = pcFactory.addGPU();
         cpu = pcFactory.addCPU();
+    }
+
+    public PC(Mediator mediator, String pcName) {
+        status = PCStatus.NOT_CHECKED;
+        name = pcName;
+        this.mediator = mediator;
+    }
+
+    public PC(PCStatus status, Mediator mediator, String pcName) {
+        this.status = status;
+        name = pcName;
+        this.mediator = mediator;
     }
 
     public static void buildPC(){
@@ -91,5 +109,14 @@ public class PC {
             System.out.println("Can't build such PC.");
         }
         return pc;
+    }
+
+    public void checkParts(){
+        mediator.checkParts(this);
+        System.out.println("PC components are checked!");
+    }
+
+    public void repair(){
+        mediator.repair(this);
     }
 }

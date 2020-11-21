@@ -12,5 +12,9 @@ public abstract class Peripherals {
         this.peripheralsType = peripheralsType;
     }
 
+    public Peripherals() {
+
+    }
+
     abstract public void connect();
 }
