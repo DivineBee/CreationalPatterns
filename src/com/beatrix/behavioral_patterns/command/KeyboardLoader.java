@@ -15,13 +15,13 @@ public class KeyboardLoader {
     }
 
     public void load() {
-        // Create instance of 3rd party devices
         Light light = new Light();
         Fan fan = new Fan();
         BoostMode boost = new BoostMode();
+        MusicSystem musicSystem = new MusicSystem();
 
 //		Command cmd =  new LightON(light);
-        Keyboard.setCommandOnSpecialKey(0,new Undocommand(Keyboard));
+        Keyboard.setCommandOnSpecialKey(0,new UndoCommand(Keyboard));
         Keyboard.setCommandOnSpecialKey(1,new LightON(light));
         LightOFF lightOff = new LightOFF(light);
         Keyboard.setCommandOnSpecialKey(2,lightOff);
@@ -33,13 +33,15 @@ public class KeyboardLoader {
         Keyboard.setCommandOnSpecialKey(7,new BoostON(boost));
         BoostOFF BoostOFF = new BoostOFF(boost);
         Keyboard.setCommandOnSpecialKey(8,BoostOFF);
-        Keyboard.setCommandOnSpecialKey(9,new UndocommandMacro(Keyboard));
+        Keyboard.setCommandOnSpecialKey(9,new UndoCommandMacro(Keyboard));
         Keyboard.setCommandOnSpecialKey(10,new MasterOffcommand(lightOff,fanOff,BoostOFF));
-
-
+        MusicOFF musicOFF = new MusicOFF(musicSystem);
+        Keyboard.setCommandOnSpecialKey(11, musicOFF);
+        Keyboard.setCommandOnSpecialKey(12,new MusicON(musicSystem));
+        Keyboard.setCommandOnSpecialKey(13,new MusicVolumeUP(musicSystem));
+        Keyboard.setCommandOnSpecialKey(14,new MusicVolumeDown(musicSystem));
     }
 }
-
 
 // There are several 3rd component or devices. They would ack as reciever of the command. Each command object would wrap them.
 class Light {

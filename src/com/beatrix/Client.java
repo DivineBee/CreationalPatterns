@@ -121,7 +121,7 @@ public class Client {
         while (flag == 1) {
             System.out.println("This is the Client Main Command Pattern with keyboard Example ");
             System.out.println("Loading the keyboard with appropriate commands and mapping them to keys ... ");
-            System.out.println(ConsoleColors.GREEN_BOLD +"Please press the any command between 1 to 10 for operation\n" +
+            System.out.println(ConsoleColors.GREEN_BOLD +"Please press the any command between 1 to 14 for operation\n" +
                     "1.        LightON\n" +
                     "2.        lightOff\n" +
                     "3.        fanOff\n" +
@@ -130,8 +130,12 @@ public class Client {
                     "6.        FanHIGH\n" +
                     "7.        BoostON\n" +
                     "8.        BoostOFF\n" +
-                    "9.        UndocommandMacro\n" +
-                    "10.       MasterOffcommand\n" + ConsoleColors.RESET);
+                    "9.        UndoCommandMacro\n" +
+                    "10.       MasterOffcommand\n" +
+                    "11.       musicOFF\n" +
+                    "12.       MusicON\n" +
+                    "13.       MusicVolumeUP\n" +
+                    "14.       MusicVolumeDown\n"+ConsoleColors.RESET);
 
             int keyboardButtonNumber = scan.nextInt();
             keyboard.buttonPress(keyboardButtonNumber);

@@ -13,9 +13,7 @@ import java.util.List;
 public interface Command {
     public void execute();
     public void undo();
-
 }
-
 
 class MasterOffcommand implements Command{
     List<Command> commandMacro;
@@ -29,7 +27,6 @@ class MasterOffcommand implements Command{
             System.out.println("putting off  "+ cmd.getClass().getSimpleName() );
             cmd.execute();
         }
-
     }
 
     @Override
@@ -37,10 +34,10 @@ class MasterOffcommand implements Command{
     }
 }
 
-class UndocommandMacro implements Command{
+class UndoCommandMacro implements Command{
     Keyboard Keyboard;
 
-    public UndocommandMacro(Keyboard Command){
+    public UndoCommandMacro(Keyboard Command){
         this.Keyboard = Command;
     }
 
@@ -59,11 +56,11 @@ class UndocommandMacro implements Command{
     }
 }
 
-class Undocommand implements Command{
+class UndoCommand implements Command{
     Command Lastcommand;
     Keyboard Keyboard;
 
-    public Undocommand(Keyboard Command){
+    public UndoCommand(Keyboard Command){
         this.Keyboard = Command;
     }
 
@@ -72,7 +69,6 @@ class Undocommand implements Command{
         System.out.println(Keyboard.getLastCommand());
         Keyboard.getLastCommand().undo();
     }
-
     @Override
     public void undo() {
         Keyboard.getLastCommand().undo();
@@ -206,5 +202,65 @@ class BoostOFF implements Command{
     @Override
     public void undo() {
         device.turnON();
+    }
+}
+
+class MusicON implements Command{
+    MusicSystem device;
+    public MusicON(MusicSystem device){
+        this.device = device;
+    }
+    @Override
+    public void execute() {
+        device.turnON();
+    }
+
+    @Override
+    public void undo() {
+        device.turnOFF();
+    }
+}
+
+class MusicOFF implements Command{
+    MusicSystem device;
+    public MusicOFF(MusicSystem device){
+        this.device = device;
+    }
+    @Override
+    public void execute() {
+        device.turnOFF();
+    }
+
+    @Override
+    public void undo() {
+        device.turnON();
+    }
+}
+class MusicVolumeUP implements Command{
+    MusicSystem device;
+    public MusicVolumeUP(MusicSystem device){
+        this.device = device;
+    }
+    @Override
+    public void execute() { device.volumeUP(); }
+
+    @Override
+    public void undo() {
+        device.volumeDOWN();
+    }
+}
+class MusicVolumeDown implements Command{
+    MusicSystem device;
+    public MusicVolumeDown(MusicSystem device){
+        this.device = device;
+    }
+    @Override
+    public void execute() {
+        device.volumeDOWN();
+    }
+
+    @Override
+    public void undo() {
+        device.volumeUP();
     }
 }
